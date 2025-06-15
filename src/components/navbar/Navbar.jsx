@@ -15,7 +15,7 @@ export default function Navbar() {
   return(
     <div className="navbar" >
       <div className="navbar-left">
-        <div className="logo" >Kompany</div>
+        <div className="logo" >Wierder.</div>
       </div>
       <div className="navbar-right">
         <button className="theme-toggle-button" onClick={themeHandler}><span className="theme-text"> LIGHT</span> <span className="mode">MODE </span>

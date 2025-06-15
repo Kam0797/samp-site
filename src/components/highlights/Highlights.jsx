@@ -48,17 +48,22 @@ export default function Highlights() {
 
   /* for(card of highlightsData) */
   return (
-  <div className="highlights-wrapper">
-    {
-      highlightsData.map((cardData,index)=> (
-          <div key={index} className={"card card"+index} >
-          <CardIcon1 />
-            <p className="card-caption">{cardData.caption}</p>
-          </div>
-        )
-      )
-    }
-  </div>
+    <>
+      <div className="section-title highlights-title">
+        Highlights
+      </div>
+      <div className="highlights-wrapper">
+        {
+          highlightsData.map((cardData,index)=> (
+              <div key={index} className={"card card"+index} >
+                <CardIcon1 />
+                <p className="card-caption">{cardData.caption}</p>
+              </div>
+            )
+          )
+        }
+      </div>
+    </>
   )
 }
 

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   class="icon-server-full"
+   viewBox="0 0 32.815293 40.848423"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   sodipodi:docname="icon-server.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.7407992"
+     inkscape:cx="11.670849"
+     inkscape:cy="31.615807"
+     inkscape:window-width="1366"
+     inkscape:window-height="723"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1" />
+  <defs
+     id="defs1">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="2.4949017 : 0.52787866 : 1"
+       inkscape:vp_y="30.339347 : 0 : 0"
+       inkscape:vp_z="2.4949017 : -4.6916573 : 1"
+       inkscape:persp3d-origin="0.99310407 : -2.0818891 : 1"
+       id="perspective1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-69.49167,-165.70274)">
+    <rect
+       class="icon-server icon-server-line icon-server-box"
+       id="rect21"
+       x="69.453125"
+       y="176.72887"
+       ry="2.3506861" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 69.992451,177.31548 c 7.478421,-10.89864 7.478421,-10.89864 7.478421,-10.89864 v 0 l 0.427398,-0.2137"
+       id="path23" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 101.39325,177.31548 c -7.478412,-10.89864 -7.478412,-10.89864 -7.478412,-10.89864 v 0 l -0.4274,-0.2137"
+       id="path23-2"
+       inkscape:transform-center-x="-15.36135"
+       inkscape:transform-center-y="-2.1152494" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 77.89827,166.20314 c 5.410089,0.21201 10.606479,0.002 16.016568,0.2137"
+       id="path24"
+       sodipodi:nodetypes="cc" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,179.71215 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,182.26988 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25-5" />
+    <path
+       class="icon-server icon-server-line"
+       id="path26"
+       sodipodi:type="arc"
+       sodipodi:cx="99.278"
+       sodipodi:cy="180.2466"
+       sodipodi:rx="0.66671854"
+       sodipodi:ry="0.66671854"
+       sodipodi:start="0"
+       sodipodi:end="6.2463598"
+       sodipodi:arc-type="slice"
+       d="m 99.944718,180.2466 a 0.66671854,0.66671854 0 0 1 -0.66058,0.66669 0.66671854,0.66671854 0 0 1 -0.672744,-0.65442 0.66671854,0.66671854 0 0 1 0.648194,-0.67874 0.66671854,0.66671854 0 0 1 0.684678,0.64192 L 99.278,180.2466 Z" />
+    <rect
+       class="icon-server icon-server-line icon-server-box"
+       id="rect21-9"
+       x="69.453125"
+       y="186.55901"
+       ry="2.3506861" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,189.53425 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25-7" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,192.09198 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25-5-3" />
+    <path
+       class="icon-server icon-server-line"
+       id="path26-6"
+       sodipodi:type="arc"
+       sodipodi:cx="99.278"
+       sodipodi:cy="190.06868"
+       sodipodi:rx="0.66671854"
+       sodipodi:ry="0.66671854"
+       sodipodi:start="0"
+       sodipodi:end="6.2463598"
+       sodipodi:arc-type="slice"
+       d="m 99.944718,190.06868 a 0.66671854,0.66671854 0 0 1 -0.66058,0.66669 0.66671854,0.66671854 0 0 1 -0.672744,-0.65441 0.66671854,0.66671854 0 0 1 0.648194,-0.67874 0.66671854,0.66671854 0 0 1 0.684678,0.64191 l -0.666266,0.0246 z" />
+    <rect
+       class="icon-server icon-server-line icon-server-box"
+       id="rect21-1"
+       x="69.453125"
+       y="186.55901"
+       ry="2.3506861" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,189.53425 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25-9" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.862065,192.09198 c 23.544903,0 23.544903,0 23.544903,0"
+       id="path25-5-4" />
+    <path
+       class="icon-server icon-server-line"
+       id="path26-7"
+       sodipodi:type="arc"
+       sodipodi:cx="99.278"
+       sodipodi:cy="190.06868"
+       sodipodi:rx="0.66671854"
+       sodipodi:ry="0.66671854"
+       sodipodi:start="0"
+       sodipodi:end="6.2463598"
+       sodipodi:arc-type="slice"
+       d="m 99.944718,190.06868 a 0.66671854,0.66671854 0 0 1 -0.66058,0.66669 0.66671854,0.66671854 0 0 1 -0.672744,-0.65441 0.66671854,0.66671854 0 0 1 0.648194,-0.67874 0.66671854,0.66671854 0 0 1 0.684678,0.64191 l -0.666266,0.0246 z" />
+    <rect
+       class="icon-server icon-server-line icon-server-box"
+       id="rect21-9-3"
+       x="69.453117"
+       y="196.34198"
+       ry="2.3506861" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.86206,199.31721 c 23.544908,0 23.544908,0 23.544908,0"
+       id="path25-7-6" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.86206,201.87494 c 23.544908,0 23.544908,0 23.544908,0"
+       id="path25-5-3-1" />
+    <path
+       class="icon-server icon-server-line"
+       id="path26-6-0"
+       sodipodi:type="arc"
+       sodipodi:cx="99.277985"
+       sodipodi:cy="199.85165"
+       sodipodi:rx="0.66671854"
+       sodipodi:ry="0.66671854"
+       sodipodi:start="0"
+       sodipodi:end="6.2463598"
+       sodipodi:arc-type="slice"
+       d="m 99.944703,199.85165 a 0.66671854,0.66671854 0 0 1 -0.66058,0.66669 0.66671854,0.66671854 0 0 1 -0.672744,-0.65441 0.66671854,0.66671854 0 0 1 0.648194,-0.67874 0.66671854,0.66671854 0 0 1 0.684678,0.64192 l -0.666266,0.0245 z" />
+    <rect
+       class="icon-server icon-server-line icon-server-box"
+       id="rect21-1-6"
+       x="69.453117"
+       y="196.34198"
+       ry="2.3506861" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.86206,199.31721 c 23.544908,0 23.544908,0 23.544908,0"
+       id="path25-9-3" />
+    <path
+       class="icon-server icon-server-line"
+       d="m 72.86206,201.87494 c 23.544908,0 23.544908,0 23.544908,0"
+       id="path25-5-4-2" />
+    <path
+       class="icon-server icon-server-line"
+       id="path26-7-0"
+       sodipodi:type="arc"
+       sodipodi:cx="99.277985"
+       sodipodi:cy="199.85165"
+       sodipodi:rx="0.66671854"
+       sodipodi:ry="0.66671854"
+       sodipodi:start="0"
+       sodipodi:end="6.2463598"
+       sodipodi:arc-type="slice"
+       d="m 99.944703,199.85165 a 0.66671854,0.66671854 0 0 1 -0.66058,0.66669 0.66671854,0.66671854 0 0 1 -0.672744,-0.65441 0.66671854,0.66671854 0 0 1 0.648194,-0.67874 0.66671854,0.66671854 0 0 1 0.684678,0.64192 l -0.666266,0.0245 z"
+       style="fill:none;stroke:none;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect1"
+       x="69.992455"
+       y="176.45258"
+       ry="2.3506861"
+       width="31.813723"
+       height="8.8722019"
+       class="icon-server icon-server-line" />
+    <rect
+       id="rect2"
+       x="69.992455"
+       y="185.31673"
+       ry="2.3506861"
+       width="31.813721"
+       height="10.366827"
+       class="icon-server icon-server-line" />
+    <rect
+       id="rect2-3"
+       width="31.813721"
+       x="69.992455"
+       y="195.68355"
+       ry="2.3506861"
+       height="10.366827"
+       class="icon-server icon-server-line" />
+  </g>
+</svg>

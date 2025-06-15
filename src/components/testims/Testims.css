@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+.testims-top-level-wrapper {
+  display: flex;
+  justify-content: center;
+  background: rgba(100,100,100,0.2);
+  /* border: 1px solid blue */
+}
+.testims-wrapper {
+  /* border : 1px solid; */
+  /* background: rgba(100,100,100,0.2); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: clamp(200px,35vh,350px);
+  gap: 0;
+  width:100%;
+  max-width: 650px;
+  /* border: 1px solid red */
+}
+.prev-testim-button, .next-testim-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 11%;
+  height: 100%;
+  background: rgba(100,100,100,0.1) 
+}
+.testim-card {
+  /* border: 1px dotted #f00; */
+  display: flex;
+  align-items: center;
+  width: 72%;
+  max-width: 400px;
+  padding: 0 3%;
+  height: 100%
+}
+.testim-pic {
+  height: 25%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(45deg,#fff,#000);
+  border-radius: 50%;
+}
+.testim-line-poet-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4%;
+  /* border: 1px dashed; */
+}
+

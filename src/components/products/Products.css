@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+.icon-server-line  {
+  stroke: var(--icon-server);
+  stroke-width: 0.8
+}
+
+.icon-server-full {
+  /* height: 100px; */
+  /* width: 300px; */
+  aspect-ratio: 3/4;
+  height: 50%;
+  fill: #00000000;
+  padding: 0% 0% 30% 0%
+}
+.products-title, .section-title {
+  background: linear-gradient(180deg,var(--section-title-top),rgba(100,100,100,0.2));
+}
+/* .product-wrapper { */
+/*   look: highlights-wrapper in src/components/highlights/Highlights.css */
+/* } */
+.product-div {
+  display: flex;
+  align-items: center;
+  width: clamp(400px,40vw,500px);
+  aspect-ratio: 1.5/1;
+  background: var(--product-bg);
+  border-radius: 2%
+  /* border: 1px solid; */
+
+}
+.product-title-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100%;
+  flex:2;
+  /* border: 1px dotted; */
+}
+.product-title {
+  padding: 11% 0px 0px 20px; 
+  font-family: Roboto Slab;
+  font-size: 160%
+
+}
+.product-description {
+  flex:3;
+  padding: 5%;
+  white-space: pre-line;
+  word-break: keep-all;
+  font-family: Fira Sans;
+  font-size: 120%;
+  line-height: 1.4;
+  font-weight: 200
+}
