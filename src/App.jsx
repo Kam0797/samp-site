@@ -5,6 +5,7 @@ import Intro from './components/intro/Intro.jsx';
 import Highlights from "./components/highlights/Highlights.jsx";
 import Products from "./components/products/Products.jsx"
 import Testims from "./components/testims/Testims.jsx"
+import Footer from "./components/footer/Footer.jsx"
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Highlights />
         <Products />
         <Testims />
+        <Footer />
       </div>
     </>
   )
