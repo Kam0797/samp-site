@@ -1,5 +1,6 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import "./Testims.css"
+import { useSwipeable } from 'react-swipeable';
 
 import TestimPrevArrow from "../../assets/testim-prev-arrow.svg?react";
 import TestimNextArrow from "../../assets/testim-next-arrow.svg?react";
@@ -31,24 +32,48 @@ line: "It's wierd, but not so. You don't know until you see for yourself.",
       pic: "heisenberg.png"
     }
   ];
+  const testimCardRef = useRef(null)
+
+  const testimSwipes = useSwipeable({
+    onSwipedLeft: ()=> {
+        changeTestim({currentTarget:{id:"next-testim"}});
+    },
+    onSwipedRight: ()=> {
+      changeTestim({currentTarget:{id:"prev-testim"}})
+    }
+  });
   function changeTestim(e) {
+
+    // use useEffect to add class for slide animation. proceeding to stash-commit
+    // 
     // console.log(e.currentTarget.id);
+    // const testimCard = testimCardRef.current;
+    const testimCard = document.querySelector(".testim-card")
+
     if (e.currentTarget.id == "prev-testim") {
+      // testimCard.classList.add("testim-card-animation-right")
       if(testimIndex > 0){
         setTestimIndex(ind => ind-1)
       }
       else{
         setTestimIndex(fakeLines.length-1)
       }
+      console.log("tc",testimCard)
+      // setTimeout(()=>testimCard.classList.remove("testim-card-animation-right"),1000)
     }
     else if(e.currentTarget.id == "next-testim") {
+      testimCard.classList.add("testim-card-animation-left")
       if (testimIndex < fakeLines.length-1){
         setTestimIndex(ind => ind+1)
       }
       else {
         setTestimIndex(0)
       }
-  }
+      setTimeout(()=>testimCard.classList.remove("testim-card-animation-left"),1000)
+    }
+    console.log("tc2",testimCard,testimIndex)
+    document.getElementById(`${testimIndex}`).classList.add("testim-card-animation-right")
+
   }
   console.log(imgPath+fakeLines[testimIndex].pic)
   return(
@@ -58,7 +83,7 @@ line: "It's wierd, but not so. You don't know until you see for yourself.",
           <button className="prev-testim-button" id="prev-testim" onClick={changeTestim}><TestimPrevArrow /></button>
           {
             // fakeLines.map((fline,index)=>(
-              <div key={testimIndex} className="testim-card">
+              <div id={testimIndex} key={testimIndex} ref={testimCardRef} className="testim-card" {...testimSwipes}>
                 <div className="testim-pic"><img className="testim-img" src={imgPath+fakeLines[testimIndex].pic} alt={fakeLines[testimIndex].pic} /></div>
                 <div className="testim-line-poet-wrap">
                   <div className="testim-line">{fakeLines[testimIndex].line}</div>
