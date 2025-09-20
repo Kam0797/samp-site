@@ -1,7 +1,9 @@
 import PersonExec from "../../assets/person-exec.svg?react"; 
 import CardIcon1 from "../../assets/card-icon1.svg?react";
+import NorthKor from "../../assets/north_kor_won.svg?react";
 // import CardIcon1 from "../../assets/card-icon1.png"
 import './Highlights.css'
+import { LucideAward, LucideEarth, LucideHandPlatter, LucidePlane, LucideRocket, LucideSmilePlus, LucideTimer, LucideTrophy, LucideUsers } from "lucide-react";
 
 
 export default function Highlights() {
@@ -10,39 +12,39 @@ export default function Highlights() {
   const highlightsData = [
     {
       caption: "Operating in 27+ countries",
-      icon: "card-icon1.svg"
+      icon: <LucideEarth size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "34000+ employees",
-      icon: "card-icon2.svg"
+      icon: <LucideUsers size={65} strokeWidth={1} className="card-icon-right"/>
     },
     {
       caption: "Award-winning Tacos™",
-      icon: "card-icon3.svg"
+      icon: <LucideTrophy size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "CheeseBiscuit of the year Award",
-      icon: "card-icon4.svg"
+      icon: <LucideAward size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "17M+ orders delivered",
-      icon: "card-icon5.svg"
+      icon: <LucideHandPlatter size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "Fastest deliveries in the world*",
-      icon: "card-icon6.svg"
+      icon: <LucideTimer size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "First taco chain in Mars",
-      icon: "card-icon7.svg"
+      icon: <LucideRocket size={65} strokeWidth={1} className="card-icon-right" />
     },
-    {
-      caption: "Only Burger retailer in pyoengyang",
-      icon: "card-icon8.svg"
-    },
+    // {
+    //   caption: "Only Burger retailer in pyoengyang",
+    //   icon: <NorthKor />
+    // },
     {
       caption: "3M+ happy customers",
-      icon: "card-icon9.svg"
+      icon: <LucideSmilePlus size={65} strokeWidth={1} className="card-icon-right" />
     }
   ]
 
@@ -56,7 +58,7 @@ export default function Highlights() {
         {
           highlightsData.map((cardData,index)=> (
               <div key={index} className={"card card"+index} >
-                <CardIcon1 />
+                {cardData.icon||<CardIcon1 />}
                 <p className="card-caption">{cardData.caption}</p>
               </div>
             )
