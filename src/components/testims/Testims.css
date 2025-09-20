@@ -40,7 +40,12 @@
   height: 75%;
   border-radius: 3%;
   background: var(--product-bg);
-  animation: slide-in 1s ease forwards;
+}
+.testim-card-animation-left {
+  animation: slide-left 1s ease forwards;
+}
+.testim-card-animation-right {
+  animation: slide-right 1s ease forwards
 }
 .testim-pic {
   height: 30%;
@@ -84,7 +89,14 @@
   /* border-radius: 100% */
 }
 
-.prev-testim-button:hover .testim-prev-arrow, .next-testim-button:hover .testim-next-arrow {
+
+@media (hover: hover) {
+  .prev-testim-button:hover .testim-prev-arrow, .next-testim-button:hover .testim-next-arrow {
+    transform: scale(1.5);
+    fill: var(--icon-server);
+  }
+}
+.prev-testim-button:active .testim-prev-arrow, .next-testim-button:active .testim-next-arrow {
   transform: scale(1.5);
   fill: var(--icon-server);
 }
@@ -97,11 +109,29 @@
   }
   100% {
     opacity: 1;
-    transform: trablateY(0);
+    transform: translateY(0);
   }
 }
-
-
+@keyframes slide-left {
+  0% {
+    opacity:0;
+    transform: translateX(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: trablateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity:0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: trablateX(0);
+  }
+}
 
 /* wtf is hunk */
 
