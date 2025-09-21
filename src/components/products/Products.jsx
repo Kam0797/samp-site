@@ -1,3 +1,4 @@
+import { LucideLaptop, LucideLaptop2, LucideMemoryStick, LucideNut, LucideScale3D } from "lucide-react"
 import IconServer from "../../assets/icon-server.svg?react"
 import "./Products.css"
 
@@ -11,17 +12,17 @@ export default function Products() {
     },
     {
       title: "e-Nut",
-      icon: "",
+      icon: <LucideLaptop2 size={105} strokeWidth={0.7} />,
       description: "- Efficiency at core - Roasts with just 4W power\n- Power in your pocket"
     },
     {
       title: "Warp-stik",
-      icon: "",
+      icon: <LucideMemoryStick size={105} strokeWidth={0.7} />,
       description: "- Best-in-class server stick\n- Run servers on the go!"
     },
     {
       title: "Wierdx",
-      icon: "",
+      icon: <LucideLaptop size={105} strokeWidth={0.7} />,
       description: "- Modular Linux distro\n- Optimised for wierder hardware, but runs anywhere"
     }
   ]
@@ -34,7 +35,7 @@ export default function Products() {
             <div className="product-div" key={index}>
               <div className="product-title-icon-wrap">
                 <div className="product-title">{product.title}</div>
-                {product.icon|| <IconServer />}
+                <div className="product-logo">{product.icon|| <IconServer />}</div>
               </div>
               <div className="product-description">{product.description}</div>
             </div>
