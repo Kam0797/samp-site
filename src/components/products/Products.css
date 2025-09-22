@@ -31,7 +31,7 @@
   justify-content: space-between;
   height:100%;
   flex:2;
-  border: 1px dotted;
+  /* border: 1px dotted; */
 }
 .product-title {
   display: flex;
@@ -39,16 +39,25 @@
   padding: 11% 0px 0px 20px; 
   font-family: Roboto Slab;
   font-size: 160%;
-  border: 1px solid #437;
+  transition: transform 0.3s ease-in-out;
+  /* border: 1px solid #437; */
+}
+.product-title:hover {
+  transform: scale(1.1);
 }
 .product-logo {
   display: flex;
   flex: 5;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  /* border: 1px solid; */
   color: var(--icon-server);
   /* max-height: 68%; */
+  transition: transform 0.5s ease-in-out;
+}
+.product-logo:hover {
+  transform: scale(1.1);
+  /* background-color: var(--product-bg); */
 }
 .product-description {
   flex:3;

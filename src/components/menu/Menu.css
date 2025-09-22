@@ -1,0 +1,43 @@
+
+
+.menu-wrapper {
+  position: absolute;
+  /* outline: 1px solid; */
+  right: 1px;
+  top: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 10px 0 0 10px;
+  outline: 1px solid var(--bg-color);
+  transition: transform 0.7s ease-in-out;
+  transform: translateX(100%);
+}
+.menu-item {
+  display: block;
+  padding: 5px 15px;
+  font-family: Roboto Slab;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.2s ease-in-out;
+}
+.menu-item:hover {
+  background-color: var(--bg-color);
+}
+.slide-out {
+  transform: translateX(100%) scale(0.5);
+  /* outline: 10px solid green; */
+}
+.slide-in {
+  transform: translateX(0);
+  /* outline: 10px solid red; */
+
+}
+@keyframes slide-in-x {
+  0% {transform: translateX(-100%);}
+  100% {transform: translateX(0);}
+}

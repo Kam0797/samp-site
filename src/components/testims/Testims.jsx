@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import "./Testims.css"
 import { useSwipeable } from 'react-swipeable';
 
@@ -12,7 +12,7 @@ export default function Testims() {
   const [testimIndex,setTestimIndex] = useState(0);
   const fakeLines = [
     {
-  line: "Best tacos i've ever had!",
+  line: "Best gamebox i've ever had!",
       poet: "Robert Fisher",
       pic: "fisher.jpg"
     },
@@ -33,56 +33,57 @@ line: "It's wierd, but not so. You don't know until you see for yourself.",
     }
   ];
   const testimCardRef = useRef(null)
+  const testimSwipeDirection = useRef(null)
+  
 
   const testimSwipes = useSwipeable({
     onSwipedLeft: ()=> {
-        changeTestim({currentTarget:{id:"next-testim"}});
+      testimSwipeDirection.current = 'left'
+      changeTestim({currentTarget:{id:"next-testim"}});
     },
     onSwipedRight: ()=> {
+      testimSwipeDirection.current = 'right'
       changeTestim({currentTarget:{id:"prev-testim"}})
     }
   });
   function changeTestim(e) {
 
     // use useEffect to add class for slide animation. proceeding to stash-commit
-    // 
-    // console.log(e.currentTarget.id);
-    // const testimCard = testimCardRef.current;
-    const testimCard = document.querySelector(".testim-card")
+
 
     if (e.currentTarget.id == "prev-testim") {
-      // testimCard.classList.add("testim-card-animation-right")
       if(testimIndex > 0){
         setTestimIndex(ind => ind-1)
       }
       else{
         setTestimIndex(fakeLines.length-1)
       }
-      console.log("tc",testimCard)
-      // setTimeout(()=>testimCard.classList.remove("testim-card-animation-right"),1000)
     }
     else if(e.currentTarget.id == "next-testim") {
-      testimCard.classList.add("testim-card-animation-left")
       if (testimIndex < fakeLines.length-1){
         setTestimIndex(ind => ind+1)
       }
       else {
         setTestimIndex(0)
       }
-      setTimeout(()=>testimCard.classList.remove("testim-card-animation-left"),1000)
     }
-    console.log("tc2",testimCard,testimIndex)
-    document.getElementById(`${testimIndex}`).classList.add("testim-card-animation-right")
-
   }
-  console.log(imgPath+fakeLines[testimIndex].pic)
+
+  useEffect(()=> {
+    const testimCard = document.querySelector(".testim-card")
+    const animationClass = testimSwipeDirection.current == 'left' ? 'testim-card-animation-left': 'testim-card-animation-right';
+
+    console.log("tc3",testimCard,testimIndex, testimSwipeDirection, animationClass)
+
+    testimCard?.classList.add(animationClass);
+    setTimeout(()=> testimCard?.classList.remove(animationClass),1000)
+  },[testimIndex])
   return(
     <>
-      <div className="section-title">Our clients say :</div>
+      <div className="section-title" id="testims">Our clients say :</div>
         <div className="testims-wrapper">
-          <button className="prev-testim-button" id="prev-testim" onClick={changeTestim}><TestimPrevArrow /></button>
+          <button className="prev-testim-button" id="prev-testim" onClick={(e) => {testimSwipeDirection.current = 'left'; changeTestim(e);}}><TestimPrevArrow /></button>
           {
-            // fakeLines.map((fline,index)=>(
               <div id={testimIndex} key={testimIndex} ref={testimCardRef} className="testim-card" {...testimSwipes}>
                 <div className="testim-pic"><img className="testim-img" src={imgPath+fakeLines[testimIndex].pic} alt={fakeLines[testimIndex].pic} /></div>
                 <div className="testim-line-poet-wrap">
@@ -90,9 +91,8 @@ line: "It's wierd, but not so. You don't know until you see for yourself.",
                   <div className="testim-poet">{"- "+fakeLines[testimIndex].poet}</div>
                 </div>
               </div>
-            // ))
           }
-          <button className="next-testim-button" id="next-testim" onClick={changeTestim}><TestimNextArrow /></button>
+          <button className="next-testim-button" id="next-testim" onClick={(e) => {testimSwipeDirection.current = 'right'; changeTestim(e);}}><TestimNextArrow /></button>
         </div> 
     </>
   )

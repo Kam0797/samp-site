@@ -1,26 +1,41 @@
 import { LucideMoon, LucideSunMedium } from 'lucide-react';
 import './Navbar.css'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useEffect } from 'react';
+import Menu from '../menu/Menu';
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('Light')
+  const [theme, setTheme] = useState('Light');
+  const [showMenu, setShowMenu] = useState(true)
+  const themeToggleRef = useRef(null);
+
 
   useEffect(()=> {
-      document.documentElement.dataset.theme = theme.toLowerCase()
-  })
+      themeToggleRef.current.classList.add('rotate');
+      document.documentElement.dataset.theme = theme.toLowerCase();
+      setTimeout(()=> themeToggleRef.current.classList.remove('rotate'),1400)
+  },[theme])
 
-  // function themeHandler() { // good, but theres a more 'react' way to do this
-  //   const theme = document.querySelector("html");
-  //   if(theme.dataset.theme == "light") {
-  //     theme.dataset.theme = "dark";
-  //       document.querySelector(".theme-text").textContent = "LIGHT";
-  //   }
-  //   else {
-  //     theme.dataset.theme = "light";
-  //     document.querySelector(".theme-text").textContent = "DARK";
-  //   }
-  // }
+  useEffect(()=> {
+    const menuButton = document.querySelector('.menu-button')
+    const stick1 = document.querySelector('.bar1')
+    const stick2 = document.querySelector('.bar2')
+    const stick3 = document.querySelector('.bar3')
+
+    if(!showMenu) {
+      setTimeout(()=>menuButton.classList.remove('jc-center'),800)
+      stick1.classList.remove('stick1')
+      stick2.classList.remove('stick2')
+      stick3.classList.remove('stick3')
+
+    }else {
+      menuButton.classList.add('jc-center')
+      stick1.classList.add('stick1')
+      stick2.classList.add('stick2')
+      stick3.classList.add('stick3')
+    }
+
+  })
   
 
   return(
@@ -29,16 +44,16 @@ export default function Navbar() {
         <div className="logo" >Wierder</div>
       </div>
       <div className="navbar-right">
-        <button className="theme-toggle-button" onClick={()=> setTheme(prev => prev == 'Light'?'Dark':'Light')}>
+        <button className="theme-toggle-button" ref={themeToggleRef} onClick={()=> setTheme(prev => prev == 'Light'?'Dark':'Light')}>
           {theme == 'Light'?<LucideMoon />:<LucideSunMedium />}
-          {/* <span className="theme-text"> LIGHT</span> <span className="mode">MODE </span> */}
         </button>
-        <button className="menu-button">
-          <div className="menu-burger-bar" />
-          <div className="menu-burger-bar" />
-          <div className="menu-burger-bar" />
+        <button className="menu-button" onClick={()=> setShowMenu(prev => !prev)}>
+          <div className="menu-burger-bar bar1 " />
+          <div className="menu-burger-bar bar2 " />
+          <div className="menu-burger-bar bar3 " />
         </button>
       </div>
+      <Menu showMenu={showMenu}/>
     </div>
   )
 }

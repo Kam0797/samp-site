@@ -1,19 +1,21 @@
 import { LucideLaptop, LucideLaptop2, LucideMemoryStick, LucideNut, LucideScale3D } from "lucide-react"
 import IconServer from "../../assets/icon-server.svg?react"
 import "./Products.css"
+import { LucideUsb } from "lucide-react"
+import { IconDeviceLaptop, IconDevices, IconDevices2, IconDevicesPc } from "@tabler/icons-react"
 
 export default function Products() {
 
   const productsData = [
     {
-      title: "e-Taco",
+      title: "WierdBase",
       icon: "",
-      description: "- Hyper-resilient 8Ghz 7-Core tacos\n- Perfect for every task"
+      description: "- Hyper-resilient 8Ghz 7-Core server\n- Perfect for every task"
     },
     {
-      title: "e-Nut",
-      icon: <LucideLaptop2 size={105} strokeWidth={0.7} />,
-      description: "- Efficiency at core - Roasts with just 4W power\n- Power in your pocket"
+      title: "WierdLink",
+      icon: <LucideUsb size={105} strokeWidth={0.7} />,
+      description: "- Control your devices from anywhere - Runs with just 0.4W power\n- Power in your pocket"
     },
     {
       title: "Warp-stik",
@@ -22,13 +24,13 @@ export default function Products() {
     },
     {
       title: "Wierdx",
-      icon: <LucideLaptop size={105} strokeWidth={0.7} />,
+      icon: <IconDevicesPc size={105} strokeWidth={0.7} />,
       description: "- Modular Linux distro\n- Optimised for wierder hardware, but runs anywhere"
     }
   ]
   return(
     <>
-    <div className="section-title products-title">Products</div>
+    <div className="section-title products-title" id="products">Products</div>
     <div className="products-wrapper">
       {
           productsData.map((product,index) => (

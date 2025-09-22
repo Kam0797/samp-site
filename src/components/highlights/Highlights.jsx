@@ -1,9 +1,8 @@
 import PersonExec from "../../assets/person-exec.svg?react"; 
 import CardIcon1 from "../../assets/card-icon1.svg?react";
-import NorthKor from "../../assets/north_kor_won.svg?react";
-// import CardIcon1 from "../../assets/card-icon1.png"
 import './Highlights.css'
 import { LucideAward, LucideEarth, LucideHandPlatter, LucidePlane, LucideRocket, LucideSmilePlus, LucideTimer, LucideTrophy, LucideUsers } from "lucide-react";
+import { IconCactus, IconCube3dSphere, IconCube3dSphereOff, IconCubeSend, IconCubeSpark } from "@tabler/icons-react";
 
 
 export default function Highlights() {
@@ -19,23 +18,23 @@ export default function Highlights() {
       icon: <LucideUsers size={65} strokeWidth={1} className="card-icon-right"/>
     },
     {
-      caption: "Award-winning Tacos™",
+      caption: "#1 in SoC benchmarks 2021",
       icon: <LucideTrophy size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
-      caption: "CheeseBiscuit of the year Award",
+      caption: "Fastest SSD of the year Award",
       icon: <LucideAward size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
-      caption: "17M+ orders delivered",
-      icon: <LucideHandPlatter size={65} strokeWidth={1} className="card-icon-right" />
+      caption: "17M+ machines delivered",
+      icon: <IconCubeSpark size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
       caption: "Fastest deliveries in the world*",
-      icon: <LucideTimer size={65} strokeWidth={1} className="card-icon-right" />
+      icon: <IconCubeSend size={65} strokeWidth={1} className="card-icon-right" />
     },
     {
-      caption: "First taco chain in Mars",
+      caption: "First network provider in Mars",
       icon: <LucideRocket size={65} strokeWidth={1} className="card-icon-right" />
     },
     // {
@@ -51,7 +50,7 @@ export default function Highlights() {
   /* for(card of highlightsData) */
   return (
     <>
-      <div className="section-title highlights-title">
+      <div className="section-title highlights-title" id="highlights">
         Highlights
       </div>
       <div className="highlights-wrapper">
