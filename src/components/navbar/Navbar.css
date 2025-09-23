@@ -78,10 +78,11 @@
   height: 2px;
   background: var(--text-color);
   border-radius: 50px;
-  transition: transform 0.7s ease-in-out, height 1s ease-in-out;
+  transition: transform 0.7s ease-in-out ;
 }
 .menu-button:hover .menu-burger-bar {
   background: var(--accent-head1);
+  /* border-radius: 50px; */
 }
 body, .navbar, div, button {
   transition:
@@ -102,16 +103,17 @@ body, .navbar, div, button {
 
 .stick2 {
   transform: translateX(200%);
+  border-radius: 50px;
+
 }
 .stick3 {
-  transform: rotate(-45deg);
-  height: 4px;
+  transform: rotate(-45deg) scaleY(2);
+  border-radius: 50px;
 }
 .stick1 {
-  transform: rotate(45deg);
-  height: 4px;
+  transform: rotate(45deg) scaleY(2);
+  border-radius: 50px;
 }
 .jc-center {
-  /* justify-content: center; */
   gap: 0;
 }

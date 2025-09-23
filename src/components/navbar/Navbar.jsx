@@ -6,13 +6,21 @@ import Menu from '../menu/Menu';
 
 export default function Navbar() {
   const [theme, setTheme] = useState('Light');
-  const [showMenu, setShowMenu] = useState(true)
+  const [showMenu, setShowMenu] = useState(false)
   const themeToggleRef = useRef(null);
+
+  let savedTheme = localStorage.getItem('theme');
+  console.log('ST?:',savedTheme)
+  if(!savedTheme) savedTheme = 'light';
+  document.documentElement.dataset.theme = savedTheme;
+
 
 
   useEffect(()=> {
       themeToggleRef.current.classList.add('rotate');
       document.documentElement.dataset.theme = theme.toLowerCase();
+      localStorage.setItem('theme',theme.toLowerCase())
+      console.log('LST:',localStorage.getItem('theme'))
       setTimeout(()=> themeToggleRef.current.classList.remove('rotate'),1400)
   },[theme])
 
@@ -23,7 +31,8 @@ export default function Navbar() {
     const stick3 = document.querySelector('.bar3')
 
     if(!showMenu) {
-      setTimeout(()=>menuButton.classList.remove('jc-center'),800)
+      // setTimeout(()=>menuButton.classList.remove('jc-center'),800)
+      menuButton.classList.remove('jc-center')
       stick1.classList.remove('stick1')
       stick2.classList.remove('stick2')
       stick3.classList.remove('stick3')
