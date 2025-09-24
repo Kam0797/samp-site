@@ -22,19 +22,16 @@ export default function Menu({showMenu}) {
     {
       name: 'Testimonials',
       url: '#testims'
-    },
-    {
-      name: 'Careers',
-      url: ''
     }
+    // ,
+    // {
+    //   name: 'Careers',
+    //   url: ''
+    // }
   ];
 
   useEffect(()=> {
-//     const animationClass = showMenu ? 'slide-in': 'slide-out';
-//     const timeout = showMenu?0:700;
-// console.info('kk:',showMenu, animationClass, showWithStyle)
-//     setTimeout(()=> {setShowWithStyle(prev=> !prev);},timeout)
-//     menuRef.current?.classList.add(animationClass);
+
     if(menuRef.current) {
       if(showMenu) {
         menuRef.current.classList.add('slide-in');
@@ -50,7 +47,7 @@ export default function Menu({showMenu}) {
     <div className='menu-wrapper' ref={menuRef} >
       {
         menuList.map(menuItem => (
-          <a href={menuItem.url} className='menu-item'>{menuItem.name}</a>
+          <a href={menuItem.url} key={menuItem.url+'_'} className='menu-item'>{menuItem.name}</a>
         ))
       }
     </div>

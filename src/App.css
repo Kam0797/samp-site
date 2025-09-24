@@ -5,6 +5,10 @@
   button {
        border: 0;
   }
+
+.content-area{
+     scroll-behavior: smooth;
+}
 :root {
   --bg-color: #E7E8E8;
   --bg-color-navbar: #CACDCD;
@@ -41,8 +45,8 @@
      color: var(--text-color);
      display: flex;
      flex-direction: column;
-     height: 100vh;
-     width: 100vw;
+     height: 100dvh;
+     width: 100dvw;
      /* border: 2px dotted #ff4; */
      overflow: hidden;
 }
