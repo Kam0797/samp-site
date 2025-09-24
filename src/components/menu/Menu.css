@@ -12,7 +12,7 @@
   backdrop-filter: blur(10px);
   border-radius: 10px 0 0 10px;
   outline: 1px solid var(--bg-color);
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
 }
 .menu-item {
@@ -29,7 +29,7 @@
   background-color: var(--bg-color);
 }
 .slide-out {
-  transform: translateX(100%) scale(0.5);
+  transform: translateX(100%) ;
   /* outline: 10px solid green; */
 }
 .slide-in {

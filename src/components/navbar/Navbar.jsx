@@ -45,7 +45,7 @@ export default function Navbar() {
       stick3.classList.add('stick3')
     }
 
-  })
+  },[showMenu])
   
 
   return(
@@ -63,7 +63,7 @@ export default function Navbar() {
           <div className="menu-burger-bar bar3 " />
         </button>
       </div>
-      <Menu showMenu={showMenu}/>
+      <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   )
 }

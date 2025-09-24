@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './Menu.css'
 
-export default function Menu({showMenu}) {
+export default function Menu({showMenu, setShowMenu}) {
 
   const [showWithStyle, setShowWithStyle] = useState(true);
   const menuRef = useRef()
@@ -44,7 +44,7 @@ export default function Menu({showMenu}) {
   },[showMenu])
 
   return ( 
-    <div className='menu-wrapper' ref={menuRef} >
+    <div className='menu-wrapper' tabIndex={0} ref={menuRef} onBlur={()=>setShowMenu(false)} >
       {
         menuList.map(menuItem => (
           <a href={menuItem.url} key={menuItem.url+'_'} className='menu-item'>{menuItem.name}</a>

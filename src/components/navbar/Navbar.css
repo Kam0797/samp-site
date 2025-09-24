@@ -107,11 +107,11 @@ body, .navbar, div, button {
 
 }
 .stick3 {
-  transform: rotate(-45deg) scaleY(2);
+  transform: rotate(-45deg) scaleY(1.5);
   border-radius: 50px;
 }
 .stick1 {
-  transform: rotate(45deg) scaleY(2);
+  transform: rotate(45deg) scaleY(1.5);
   border-radius: 50px;
 }
 .jc-center {
