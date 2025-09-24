@@ -5,18 +5,19 @@ import { useEffect } from 'react';
 import Menu from '../menu/Menu';
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('Light');
   const [showMenu, setShowMenu] = useState(false)
   const themeToggleRef = useRef(null);
 
   let savedTheme = localStorage.getItem('theme');
   console.log('ST?:',savedTheme)
   if(!savedTheme) savedTheme = 'light';
-  document.documentElement.dataset.theme = savedTheme;
+  // document.documentElement.dataset.theme = savedTheme;
+  const [theme, setTheme] = useState(savedTheme);
 
 
 
   useEffect(()=> {
+    // the better way is to do this in a top level comp, like contextProvider..... 
       themeToggleRef.current.classList.add('rotate');
       document.documentElement.dataset.theme = theme.toLowerCase();
       localStorage.setItem('theme',theme.toLowerCase())
@@ -50,11 +51,11 @@ export default function Navbar() {
   return(
     <div className="navbar" >
       <div className="navbar-left">
-        <div className="logo" >Wierder</div>
+        <div className="logo" >Wierder.</div>
       </div>
       <div className="navbar-right">
-        <button className="theme-toggle-button" ref={themeToggleRef} onClick={()=> setTheme(prev => prev == 'Light'?'Dark':'Light')}>
-          {theme == 'Light'?<LucideMoon />:<LucideSunMedium />}
+        <button className="theme-toggle-button" ref={themeToggleRef} onClick={()=> setTheme(prev => prev == 'light'?'dark':'light')}>
+          {theme == 'light'?<LucideMoon />:<LucideSunMedium />}
         </button>
         <button className="menu-button" onClick={()=> setShowMenu(prev => !prev)}>
           <div className="menu-burger-bar bar1 " />

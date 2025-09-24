@@ -12,7 +12,7 @@ export default function Menu({showMenu}) {
       url: '#about-us',
     },
     {
-      name: 'HighLights',
+      name: 'Highlights',
       url: '#highlights'
     },
     {
